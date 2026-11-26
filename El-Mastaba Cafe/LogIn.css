@@ -1,0 +1,271 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: #faf3e8;
+  color: #4a2c1a;
+  font-family: Georgia, "Times New Roman", serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 24px 16px;
+}
+
+/* ---------- الهيدر ---------- */
+header { text-align: center; }
+header h1 { font-size: 2.2rem; letter-spacing: 1px; }
+
+nav {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+}
+
+nav a {
+  color: #4a2c1a;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 2px solid #4a2c1a;
+  transition: all .25s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  background: #c8921a;
+  border-color: #c8921a;
+  color: #2b1608;
+}
+
+/* ---------- الصندوق الرئيسي ---------- */
+.box {
+  position: relative;
+  width: 100%;
+  max-width: 880px;
+  height: 560px;
+  background: #fff;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(74, 44, 26, .25);
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+}
+
+/* النص الشمال الملوّن */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 2;
+  background: linear-gradient(160deg, #6b3a1f, #3a1d0e);
+  color: #faf3e8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 32px;
+  text-align: center;
+  transition: transform .7s cubic-bezier(.65, 0, .35, 1);
+}
+
+.overlay h2 { font-family: Georgia, serif; font-size: 2rem; }
+.overlay p  { line-height: 1.6; max-width: 26ch; }
+
+.overlay button {
+  margin-top: 8px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 14px 36px;
+  border-radius: 999px;
+  border: 2px solid #c8921a;
+  background: #c8921a;
+  color: #2b1608;
+  cursor: pointer;
+  transition: all .25s ease;
+}
+
+.overlay button:hover,
+.overlay button:focus-visible {
+  background: transparent;
+  color: #c8921a;
+}
+
+/* النص اليمين: الفورم */
+.panel {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  transition: transform .7s cubic-bezier(.65, 0, .35, 1);
+}
+
+form {
+  position: absolute;
+  inset: 0;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  transition: opacity .4s ease, visibility .4s ease;
+}
+
+form h2 {
+  font-family: Georgia, serif;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+input {
+  width: 100%;
+  font-size: 16px;
+  padding: 14px 16px;
+  border: 2px solid #eadcc4;
+  border-radius: 14px;
+  background: #fffdf9;
+  color: #4a2c1a;
+  outline: none;
+  transition: border-color .2s ease;
+}
+
+input:focus { border-color: #c8921a; }
+
+form button {
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 14px;
+  border: none;
+  border-radius: 14px;
+  background: #4a2c1a;
+  color: #faf3e8;
+  cursor: pointer;
+  transition: background .25s ease, color .25s ease;
+}
+
+form button:hover,
+form button:focus-visible {
+  background: #c8921a;
+  color: #2b1608;
+}
+
+/* افتراضياً: Login ظاهر وSign up مخفي */
+#signupForm { opacity: 0; visibility: hidden; }
+
+/* ---------- بعد الضغط على Sign up ---------- */
+.box.signup .overlay { transform: translateX(100%); }
+.box.signup .panel   { transform: translateX(-100%); }
+.box.signup #loginForm  { opacity: 0; visibility: hidden; }
+.box.signup #signupForm { opacity: 1; visibility: visible; }
+
+/* ---------- الفون: الحركة رأسية ---------- */
+@media (max-width: 700px) {
+  .box { height: 680px; }
+
+  .overlay {
+    width: 100%;
+    height: 220px;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .overlay h2 { font-size: 1.6rem; }
+
+  .panel {
+    left: 0;
+    top: 220px;
+    width: 100%;
+    height: 460px;
+  }
+
+  .box.signup .overlay { transform: translateY(460px); }
+  .box.signup .panel   { transform: translateY(-220px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .overlay, .panel, form { transition-duration: .01s; }
+}.overlay .btn-link {
+  margin-top: 8px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 14px 36px;
+  border-radius: 999px;
+  border: 2px solid #c8921a;
+  background: #c8921a;
+  color: #2b1608;
+  text-decoration: none;
+  transition: all .25s ease;
+}
+
+.overlay .btn-link:hover,
+.overlay .btn-link:focus-visible {
+  background: transparent;
+  color: #c8921a;
+}
+@keyframes identifier {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+body {
+  animation: pageIn .5s ease both;
+}
+
+body.leaving {
+  animation: pageOut .4s ease forwards;
+}
+
+@keyframes pageIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes pageOut {
+  to { opacity: 0; transform: translateY(-20px); }
+}
+/* Done message */
+.done-toast {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: rgba(74, 44, 26, .9);
+  color: #faf3e8;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+  animation: doneIn .3s ease both;
+}
+.done-check {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #c8921a;
+  color: #2b1608;
+  font-family: system-ui, sans-serif;
+  font-size: 1.8rem;
+  animation: checkPop .45s cubic-bezier(.34, 1.56, .64, 1) .15s both;
+}
+@keyframes doneIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes checkPop { from { transform: scale(0); } to { transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) { .done-toast, .done-check { animation: none; } }

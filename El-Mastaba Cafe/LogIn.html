@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="LogIn.css">
+</head>
+<body>
+
+  <header>
+    <h1>Elmastaba</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="About.html">About Us</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="box" id="box">
+
+    <div class="overlay">
+      <h2 id="overlayTitle">New here?</h2>
+      <p id="overlayText">Create an account and join us for a great cup of coffee.</p>
+      <button type="button" id="toggleBtn">Sign up</button>
+    </div>
+
+    <div class="panel">
+      <form id="loginForm">
+        <h2>Sign in</h2>
+        <input type="email" placeholder="Enter Your Email" aria-label="Email" autocomplete="email" required>
+        <input type="password" placeholder="Enter Your Password" aria-label="Password" autocomplete="current-password" required>
+        <button type="submit">Sign in</button>
+      </form>
+
+      <form id="signupForm" inert>
+        <h2>Sign up</h2>
+        <input type="text" placeholder="Enter Your Name" aria-label="Name" autocomplete="name" required>
+        <input type="email" placeholder="Enter Your Email" aria-label="Email" autocomplete="email" required>
+        <input type="password" placeholder="Create A Password" aria-label="Password" autocomplete="new-password" required>
+        <button type="submit">Create account</button>
+      </form>
+    </div>
+
+  </div>
+
+  <script src="LogIn.js"></script>
+  <script src="auth.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,272 @@
+body {
+    animation: identifier 3s ease-in-out;
+    background-color: #4a2c1a;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+main {
+    background-color: #ffebca;
+}
+
+.img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    border: 3px #d4a017 solid;
+}
+
+header {
+    text-align: center;
+    color: #ffebca;
+    font-size: 50px;
+    background-color: #4a2c1a;
+    position: relative;
+    padding: 32px 20px;
+}
+
+.auth {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    display: flex;
+    gap: 8px;
+}
+
+.btn {
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 999px;
+}
+
+.btn-outline {
+    color: #faf3e8;
+    border: 2px solid #faf3e8;
+}
+
+.btn-fill {
+    color: #faf3e8;
+    border: 2px solid #faf3e8;
+}
+
+.btn {
+    transition: all 0.25s ease;
+    /* عشان اللون يتغير بنعومة */
+}
+
+.btn-outline:hover {
+    background: #c8921a;
+    border-color: #c8921a;
+    color: #2b1608;
+}
+
+.btn-fill:hover {
+    background: #c8921a;
+    color: #2b1608;
+    border-color: #c8921a;
+}
+
+.btn-outline:hover,
+.btn-outline:active,
+.btn-outline:focus-visible {
+    background: #c8921a;
+    border-color: #c8921a;
+    color: #2b1608;
+}
+
+
+
+@media (max-width: 480px) {
+    .auth {
+        position: static;
+        justify-content: center;
+        margin-bottom: 16px;
+    }
+}
+
+.text {
+    color: #4a2c1a;
+    border-radius: 20px;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text p {
+    max-width: 600px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
+@keyframes identifier {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+
+.main {
+    background-color: #c69c5a;
+    padding: 30px;
+}
+
+.why {
+    color: #4a2c1a;
+    font-size: 70px;
+
+}
+
+.card {
+    background-color: aliceblue;
+    color: #4a2c1a;
+    border-radius: 30px;
+    max-width: 700px;
+    width: fit-content;
+    margin: 20px 30px;
+    padding: 10px;
+}
+
+.card h4 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.bin-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: 45%;
+    max-width: 450px;
+    margin: 0;
+    text-align: center;
+}
+
+.menu {
+    padding: 32px 20px;
+    text-align: center;
+}
+
+.menu table {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    /* يتوسط الصفحة */
+    font-size: 1.1rem;
+}
+
+.menu td {
+    padding: 14px 8px;
+    border-bottom: 1px solid #e6d5bb;
+}
+
+.menu td:first-child {
+    text-align: left;
+    /* الاسم في الشمال */
+}
+
+.menu td:last-child {
+    text-align: right;
+    /* السعر في اليمين */
+    font-weight: 700;
+}
+
+.menu tr:last-child td {
+    border-bottom: none;
+    /* آخر صف من غير خط */
+}
+
+.menu h2 {
+    font-size: 40px;
+}
+
+.order-wrap {
+    text-align: center;
+    padding: 40px 16px 60px;
+}
+
+.order-btn {
+    display: inline-block;
+    background: #c9971c;
+    color: #4a2c1d;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 14px 44px;
+    border-radius: 999px;
+    text-decoration: none;
+    border: 2px solid #c9971c;
+    transition: background .2s, color .2s, border-color .2s;
+}
+
+.order-btn:hover {
+    background: #4a2c1d;
+    border-color: #4a2c1d;
+    color: #fbe9cc;
+}
+
+.order-btn:focus-visible {
+    outline: 3px solid #4a2c1d;
+    outline-offset: 3px;
+}
+
+
+/* Page leave transition (used by transition.js) */
+body.leaving {
+    animation: pageOut .4s ease forwards;
+}
+
+@keyframes pageOut {
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+@media (max-width: 480px) {
+  header h1 { font-size: 2.2rem; }
+  .why { font-size: 2.2rem; }
+  .menu h2 { font-size: 1.8rem; }
+}
+.pills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 14px;
+    font-size: 1rem;
+}
+
+.pills a {
+    color: #ffebca;
+    text-decoration: none;
+    border: 1.5px solid #ffebca;
+    border-radius: 999px;
+    padding: 6px 18px;
+    transition: background .2s, color .2s;
+}
+
+.pills a:hover,
+.pills a:focus-visible,
+.pills a[aria-current] {
+    background: #ffebca;
+    color: #4a2c1a;
+}

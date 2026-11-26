@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign up</title>
+  <link rel="stylesheet" href="LogIn.css">
+</head>
+<body>
+
+  <header>
+    <h1>Elmastaba</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="About.html">About Us</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- الكلاس signup معناه: الفورم شمال واللون البني يمين -->
+  <div class="box signup">
+
+    <div class="overlay">
+      <h2>Welcome back!</h2>
+      <p>Already have an account? Sign in to continue.</p>
+      <a href="LogIn.html" class="btn-link">Sign in</a>
+    </div>
+
+    <div class="panel">
+      <form id="signupForm" action="#" method="post">
+        <h2>Sign up</h2>
+        <input type="text" name="name" placeholder="Enter Your Name" aria-label="Name" autocomplete="name" required>
+        <input type="email" name="email" placeholder="Enter Your Email" aria-label="Email" autocomplete="email" required>
+        <input type="password" name="password" placeholder="Create A Password" aria-label="Password" autocomplete="new-password" minlength="6" required>
+        <button type="submit" >Create account</button>
+      </form>
+    </div>
+
+  </div>
+<script src="auth.js"></script>
+</body>
+</html>

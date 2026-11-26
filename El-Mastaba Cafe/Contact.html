@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Elmastaba</title>
+<link rel="stylesheet" href="Info.css">
+</head>
+<body>
+
+<header class="top">
+  <h1>Elmastaba</h1>
+  <nav class="pills" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="About.html">About Us</a>
+    <a href="Menu.html">Menu</a>
+    <a href="Contact.html" aria-current="page">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <div class="contact-head">
+    <h2>Contact us</h2>
+    <p>Questions, feedback or a table for a group? Send us a message.</p>
+  </div>
+
+  <div class="contact-grid">
+    <dl class="details">
+      <dt>Phone</dt><dd>+20 1503234942</dd>
+      <dt>Email</dt><dd id="mailText">jooabdo2192010@gmail.com</dd>
+      <dt>Address</dt><dd> Online Cafe </dd>
+      <dt>Opening hours</dt><dd> All Day </dd>
+    </dl>
+
+    <form class="contact-form" id="contactForm">
+      <label>Name <input type="text" name="name" autocomplete="name" required></label>
+      <label>Email <input type="email" name="email" autocomplete="email" required></label>
+      <label>Message <textarea name="message" required></textarea></label>
+      <button type="submit">Send message</button>
+      <p id="status" role="status" hidden></p>
+    </form>
+  </div>
+</main>
+
+<footer>© 2026 Elmastaba Cafe </footer>
+
+<script src="Contact.js"></script>
+<script src="transition.js"></script>
+</body>
+</html>
